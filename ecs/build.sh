@@ -1,7 +1,5 @@
 #!/bin/sh
 
-current=$(date +%y.%m)
-version=${1:-$current}
+version=1
 
-docker build --build-arg VERSION=$version -t ejabberd/ecs:$version .
-docker tag ejabberd/ecs:$version ejabberd/ecs:latest
+docker build --build-arg VERSION=$version -t doomsower/ejabberd-ecs:$version .
